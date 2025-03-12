@@ -82,7 +82,7 @@ class Car{
     
         const scaleFactor = 2.5; // Adjust this value to make it bigger
         const newWidth = this.width * scaleFactor;
-        const newHeight = this.height * scaleFactor/1.5;
+        const newHeight = this.height * scaleFactor;
     
         ctx.drawImage(this.image, -newWidth / 2, -newHeight /2, newWidth, newHeight);
         

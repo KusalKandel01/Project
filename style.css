@@ -1,9 +1,10 @@
-body{
-    margin:0;
-    background:green;
-    overflow:hidden;
-    text-align:center;
+body {
+	margin: 0;
+	background: green;
+	overflow: hidden;
+	text-align: center;
 }
-#myCanvas{
-    background:lightgray;
+
+#myCanvas {
+	background: lightgray;
 }
