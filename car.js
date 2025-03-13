@@ -67,14 +67,22 @@ class Car {
         ctx.translate(this.x, this.y);
         ctx.rotate(-this.angle);
 
-        const scaleFactor = 5; // Increased for better visibility
+        const scaleFactor = 4;
         const newWidth = this.width * scaleFactor;
         const newHeight = this.height * scaleFactor / 1.5;
 
-        ctx.shadowBlur = 10;
-        ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+        // Draw shadow
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = "rgba(0, 0, 0, 0.6)";
+        ctx.shadowOffsetX = 5;
+        ctx.shadowOffsetY = 5;
+
         ctx.drawImage(this.image, -newWidth / 2, -newHeight / 2, newWidth, newHeight);
+
+        // Reset shadow settings
         ctx.shadowBlur = 0;
+        ctx.shadowOffsetX = 0;
+        ctx.shadowOffsetY = 0;
 
         ctx.restore();
     }
