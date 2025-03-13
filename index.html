@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-
 <head>
-  <meta charset="UTF-8">
-  <title>Doppler Effect's</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Doppler Effect Simulation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <canvas id="myCanvas">
-  </canvas>
-  <script src="soundWave.js"></script>
-  <script src="microphone.js"></script>
-  <script src="utils.js"></script>
-  <script src="road.js"></script>
-  <script src="controls.js"></script>
-  <script src="car.js"></script>
-  <script src="main.js"></script>
+    <canvas id="myCanvas"></canvas>
+    <div id="speedPanel" class="side-panel">
+        <h3>Speed Info</h3>
+        <p>Speed: <span id="speedValue">0</span> units</p>
+        <p>Max Speed: <span id="maxSpeedValue">40</span> units</p>
+    </div>
+    <div id="freqPanel" class="side-panel">
+        <h3>Frequency Info</h3>
+        <p>Received Freq: <span id="freqValue"></span></p>
+    </div>
+    <button id="waveToggle">TOGGLE WAVES</button>
+    <script src="soundWave.js"></script>
+    <script src="microphone.js"></script>
+    <script src="utils.js"></script>
+    <script src="road.js"></script>
+    <script src="controls.js"></script>
+    <script src="car.js"></script>
+    <script src="main.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'91fd56fde8177b91',t:'MTc0MTg4Nzg3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
-
 </html>
