@@ -42,7 +42,6 @@ function animate() {
     microphone.update();
     for (let i = soundWave.length - 1; i >= 0; i--) {
         soundWave[i].update();
-        if (soundWave[i].radius > 1000) soundWave.splice(i, 1);
     }
     microphone.receive(soundWave);
 
@@ -64,6 +63,13 @@ function animate() {
 
     updateSpeedDisplay();
     updateFreqDisplay();
+
+    // Limit the number of sound waves to a maximum (e.g., 5)
+    const maxWaves = 5;
+    if (soundWave.length > maxWaves) {
+        soundWave.shift(); // Remove the oldest wave
+    }
+
     requestAnimationFrame(animate);
 }
 

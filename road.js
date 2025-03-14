@@ -24,7 +24,6 @@ class Road {
     }
 
     getRoadCenter() {
-        // Calculate the exact center of the road, including curbs
         return this.left + this.width / 2;
     }
 
